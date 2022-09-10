@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from './components/Navbar';
-import EditTask from './components/EditTask';
-import Task from './components/Task';
 import NewTask from './components/NewTask';
 import Search from './components/Search';
 import TaskList from './components/TaskList'
@@ -45,15 +43,15 @@ function App() {
 
   return (
     <main className={isDarkMode ? "dark-mode" : ""}>
-      <Header isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} />
+      <Navbar isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} />
       <Search search={search} onSearchChange={setSearch} />
-      <MessageList
+      <TaskList
         messages={displayedMessages}
         currentUser={testUser}
         onMessageDelete={handleDeleteMessage}
         onUpdateMessage={handleUpdateMessage}
       />
-      <NewMessage currentUser={testUser} onAddMessage={handleAddMessage} />
+      <NewTask currentUser={testUser} onAddMessage={handleAddMessage} />
     </main>
   );
 }
