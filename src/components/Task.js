@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EditMessage from "./EditMessage";
+import EditTask from "./EditTask";
 
 function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -28,7 +28,7 @@ function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
       <span className="user">{username}</span>
       <span className="time">{timestamp}</span>
       {isEditing ? (
-        <EditMessage
+        <EditTask
           id={id}
           body={body}
           onUpdateMessage={handleUpdateMessage}
