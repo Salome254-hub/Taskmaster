@@ -6,7 +6,7 @@ import NewTask from './components/NewTask';
 import Search from './components/Search';
 import TaskList from './components/TaskList'
 
-const testUser = { username: "Sally" };
+const testUser = { username: "Duane" };
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -42,10 +42,19 @@ function App() {
   const displayedMessages = messages.filter((message) =>
     message.body.toLowerCase().includes(search.toLowerCase())
   );
+
   return (
-    <div className="App">
-    <Navbar/>
-    </div>
+    <main className={isDarkMode ? "dark-mode" : ""}>
+      <Header isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} />
+      <Search search={search} onSearchChange={setSearch} />
+      <MessageList
+        messages={displayedMessages}
+        currentUser={testUser}
+        onMessageDelete={handleDeleteMessage}
+        onUpdateMessage={handleUpdateMessage}
+      />
+      <NewMessage currentUser={testUser} onAddMessage={handleAddMessage} />
+    </main>
   );
 }
 
