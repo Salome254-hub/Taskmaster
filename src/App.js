@@ -9,6 +9,10 @@ import TaskList from './components/TaskList'
 const testUser = { username: "Sally" };
 
 function App() {
+
+  function handleAddMessage(newMessage) {
+    setMessages([...messages, newMessage]);
+  }
   return (
     <div className="App">
     <Navbar/>
