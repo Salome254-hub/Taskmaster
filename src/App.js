@@ -1,10 +1,11 @@
-import './App.css';
-import Todolist from './components/Todolist';
+import React from 'react';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
     <div className="App">
-    <Todolist/>
+    <Navbar/>
     </div>
   );
 }
