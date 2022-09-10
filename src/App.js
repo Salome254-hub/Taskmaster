@@ -5,6 +5,9 @@ import Task from './components/Task';
 import NewTask from './components/NewTask';
 import Search from './components/Search';
 import TaskList from './components/TaskList'
+
+const testUser = { username: "Sally" };
+
 function App() {
   return (
     <div className="App">
