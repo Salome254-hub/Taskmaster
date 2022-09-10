@@ -1,5 +1,5 @@
 import React from "react";
-import Message from "./Message";
+import Task from "./Task";
 
 function MessageList({
   messages,
@@ -11,7 +11,7 @@ function MessageList({
     <div className="list">
       <ul>
         {messages.map((message) => (
-          <Message
+          <Task
             key={message.id}
             message={message}
             currentUser={currentUser}

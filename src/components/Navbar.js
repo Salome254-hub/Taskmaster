@@ -1,9 +1,9 @@
 import React from "react";
 
-function Taskmaster({ isDarkMode, onToggleDarkMode }) {
+function Header({ isDarkMode, onToggleDarkMode }) {
   return (
     <header>
-      <h1>Taskmaster</h1>
+      <h1>TaskMaster</h1>
       <div className="toggle-switch">
         <input
           type="checkbox"
@@ -17,4 +17,4 @@ function Taskmaster({ isDarkMode, onToggleDarkMode }) {
   );
 }
 
-export default Taskmaster;
+export default Header;
