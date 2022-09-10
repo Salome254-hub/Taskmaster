@@ -9,6 +9,15 @@ import TaskList from './components/TaskList'
 const testUser = { username: "Sally" };
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [messages, setMessages] = useState([]);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:4000/messages")
+      .then((r) => r.json())
+      .then((messages) => setMessages(messages));
+  }, []);
 
   function handleAddMessage(newMessage) {
     setMessages([...messages, newMessage]);
