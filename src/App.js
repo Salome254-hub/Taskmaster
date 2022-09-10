@@ -27,6 +27,21 @@ function App() {
     const updatedMessages = messages.filter((message) => message.id !== id);
     setMessages(updatedMessages);
   }
+
+  function handleUpdateMessage(updatedMessageObj) {
+    const updatedMessages = messages.map((message) => {
+      if (message.id === updatedMessageObj.id) {
+        return updatedMessageObj;
+      } else {
+        return message;
+      }
+    });
+    setMessages(updatedMessages);
+  }
+
+  const displayedMessages = messages.filter((message) =>
+    message.body.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="App">
     <Navbar/>
