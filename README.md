@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-
+# Taskmaster React App
+This is the frontend of My Taskmaster App that can be used by employees to add their daily tasks for accountability.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
