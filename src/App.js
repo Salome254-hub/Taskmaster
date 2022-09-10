@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Navbar from './components/Navbar';
 import EditTask from './components/EditTask';
 import Task from './components/Task';
@@ -21,6 +21,11 @@ function App() {
 
   function handleAddMessage(newMessage) {
     setMessages([...messages, newMessage]);
+  }
+
+  function handleDeleteMessage(id) {
+    const updatedMessages = messages.filter((message) => message.id !== id);
+    setMessages(updatedMessages);
   }
   return (
     <div className="App">
