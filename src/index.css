@@ -1,21 +1,21 @@
 :root {
   --bg-color-1: rgb(255, 255, 255);
-  --bg-color-2: rgba(245, 245, 245);
-  --bg-color-3: rgba(230, 230, 230);
-  --main-font-color: rgb(0, 0, 0);
+  --bg-color-2: white;
+  --bg-color-3: rgb(235, 155, 228);
+  --main-font-color: rgb(245, 39, 218);
   --alt-font-color: rgb(25, 25, 25);
-  --theme-primary: rgba(230, 137, 206, 0.87);
+  --theme-primary: rgba(223, 92, 228, 0.87);
   --theme-primary-gradient: linear-gradient(
     90deg,
-    rgb(240, 171, 205) 0%,
+    rgb(216, 93, 155) 0%,
     rgb(173, 234, 236) 100%
   );
 }
 
 main.dark-mode {
-  --bg-color-1: rgb(0, 0, 0);
-  --bg-color-2: rgba(50, 50, 50);
-  --bg-color-3: rgba(75, 75, 75);
+  --bg-color-1: rgb(38, 184, 184);
+  --bg-color-2: rgb(27, 28, 29);
+  --bg-color-3: grey;
   --main-font-color: rgb(10, 82, 92);
   --alt-font-color: black;
   --theme-primary:rgb(18, 252, 232);
