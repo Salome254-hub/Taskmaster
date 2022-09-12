@@ -4,11 +4,11 @@
   --bg-color-3: rgba(230, 230, 230);
   --main-font-color: rgb(0, 0, 0);
   --alt-font-color: rgb(25, 25, 25);
-  --theme-primary: rgba(233, 11, 121, 1);
+  --theme-primary: rgba(230, 137, 206, 0.87);
   --theme-primary-gradient: linear-gradient(
     90deg,
-    rgba(233, 11, 121, 1) 0%,
-    rgba(242, 106, 88, 1) 100%
+    rgb(240, 171, 205) 0%,
+    rgb(173, 234, 236) 100%
   );
 }
 
@@ -16,13 +16,15 @@ main.dark-mode {
   --bg-color-1: rgb(0, 0, 0);
   --bg-color-2: rgba(50, 50, 50);
   --bg-color-3: rgba(75, 75, 75);
-  --main-font-color: rgb(141, 239, 252);
+  --main-font-color: rgb(10, 82, 92);
   --alt-font-color: black;
-  --theme-primary: rgb(13, 232, 214);
+  --theme-primary:rgb(18, 252, 232);
   --theme-primary-gradient: linear-gradient(
     90deg,
-    rgb(18, 19, 18) 0%,
-    rgb(12, 12, 11) 100%
+    rgba(34, 6, 6, 0.664) 0%,
+    rgb(94, 245, 237) 100%
+     
+    
   );
 }
 
@@ -47,7 +49,7 @@ main {
   grid-template-columns: 5fr;
   grid-template-rows: auto auto 7fr auto;
   color: var(--main-font-color);
-  background-color: aquamarine;
+  background-color: rgb(180, 243, 222);
   transition: all 0.5s;
   box-shadow: 500px 500px 215px -10px white;
   
