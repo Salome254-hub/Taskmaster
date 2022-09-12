@@ -6,7 +6,7 @@ function EditMessage({ id, body, onUpdateMessage }) {
   function handleFormSubmit(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:9292/tasks/${id}`, {
+    fetch(`https://mastertask-backend.herokuapp.com/tasks/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

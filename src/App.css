@@ -6,3 +6,10 @@
 
 
 }
+body { 
+
+  background: url("../public/assets/image.jpg");
+  background-size: cover;
+  font-family: sans-serif;
+  color:aliceblue;
+}

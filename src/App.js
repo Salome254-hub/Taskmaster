@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from './components/Navbar';
 import NewTask from './components/NewTask';
 import Search from './components/Search';
-import TaskList from './components/TaskList'
+import TaskList from './components/TaskList';
+import './App.css';
+
 
 const testUser = { username: "Sally" };
 
@@ -12,7 +14,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:9292/tasks")
+    fetch("https://mastertask-backend.herokuapp.com/")
       .then((r) => r.json())
       .then((messages) => setMessages(messages));
   }, []);
@@ -42,17 +44,28 @@ function App() {
   );
 
   return (
+    <>
+    <div className="App" >
+    
+    
+    </div>
     <main className={isDarkMode ? "dark-mode" : ""}>
-      <Navbar isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} />
-      <Search search={search} onSearchChange={setSearch} />
-      <TaskList
-        messages={displayedMessages}
-        currentUser={testUser}
-        onMessageDelete={handleDeleteMessage}
-        onUpdateMessage={handleUpdateMessage}
-      />
-      <NewTask currentUser={testUser} onAddMessage={handleAddMessage} />
-    </main>
+    
+    <Navbar isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} />
+    <Search search={search} onSearchChange={setSearch} />
+    <TaskList
+      messages={displayedMessages}
+      currentUser={testUser}
+      onMessageDelete={handleDeleteMessage}
+      onUpdateMessage={handleUpdateMessage}
+    />
+    <NewTask currentUser={testUser} onAddMessage={handleAddMessage} />
+    
+  </main>
+    
+   
+    
+    </>
   );
 }
 

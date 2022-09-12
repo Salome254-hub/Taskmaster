@@ -27,29 +27,30 @@ main.dark-mode {
 }
 
 * {
-  margin: 0;
+  margin: 20;
   padding: 0;
-  size: 500px;
+  size: 1000px;
 }
 
 body {
   font-size: 14px;
-  font-family: "Helvetica", sans-serif;
-  background-color: grey
+  font-family:Verdana, sans-serif;
+  background-color: rgb(241, 245, 247);
   
 }
 
 main {
-  display:inline-flexbox;
+  display:inline-flex;
   max-width: 2000px;
   height: 500px;
-  margin: 100px auto;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr auto;
+  margin: 175px auto;
+  grid-template-columns: 5fr;
+  grid-template-rows: auto auto 7fr auto;
   color: var(--main-font-color);
-  background-color: grey;
+  background-color: aquamarine;
   transition: all 0.5s;
-  box-shadow: 10px 510px 15px -6px #8c8c8c;
+  box-shadow: 500px 500px 215px -10px white;
+  
 }
 
 .highlight {

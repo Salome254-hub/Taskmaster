@@ -11,7 +11,7 @@ function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
   const isCurrentUser = currentUser.username === username;
 
   function handleDeleteClick() {
-    fetch(`http://localhost:9292/${id}`, {
+    fetch(`https://mastertask-backend.herokuapp.com/tasks/${id}`, {
       method: "DELETE",
     });
 
