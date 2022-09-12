@@ -4,7 +4,7 @@ import NewTask from './components/NewTask';
 import Search from './components/Search';
 import TaskList from './components/TaskList'
 
-const testUser = { username: "Duane" };
+const testUser = { username: "Sally" };
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -12,7 +12,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:9292")
+    fetch("http://localhost:9292/tasks")
       .then((r) => r.json())
       .then((messages) => setMessages(messages));
   }, []);
